@@ -1,0 +1,142 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #0a019a;
+  overflow: hidden;
+}
+
+hr {
+  height: .5px;
+  width: 95%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  height: 100vh;
+  width: 100vw;
+}
+
+section .header {
+  color: white;
+  font-size: 2rem;
+}
+
+section .header span {
+  color: rgba(255 255 255 / 80%);
+  text-decoration: underline;
+}
+
+section small {
+  color: rgba(255 255 255 / 50%);
+  margin: 2vh;
+}
+
+section button {
+  width: 10vw;
+  background: black;
+  color: white;
+  border: unset;
+  height: 5vh;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+section button:hover {
+  cursor: pointer;
+  background: rgba(0 0 0 / 50%);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0 0 0 / 50%);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: auto;
+  max-height: 40vh;
+  width: 50vw;
+  padding: 5vh;
+  background: black;
+  border-radius: 30px;
+  animation: open-modal .8s ease;
+}
+
+.close-modal {
+  animation: close-modal .8s ease;
+}
+
+@keyframes open-modal {
+  0% {
+    transform: translateY(-30vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes close-modal {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30vh);
+    background: transparent;
+  }
+}
+
+.modal h1 {
+  color: white;
+  width: 100%;
+  display: flex;
+  font-weight: 500;
+}
+
+.modal .content p {
+  font-size: 1rem;
+  font-family: Verdana, sans-serif;
+}
+
+.modal .content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal .content button {
+  width: 10vw;
+  background-color: #0a019a;
+  color: white;
+  border: unset;
+  height: 5vh;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2vh;
+}
+
+.modal .content button:hover {
+  background-color: rgb(10 1 154 / 50%);
+  cursor: pointer;
+}
