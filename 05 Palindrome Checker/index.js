@@ -4,11 +4,7 @@ const label = document.querySelector('label');
 
 const reverse = (word = '') => {
   const letters = word.split('');
-
-  reversedWord = '';
-  letters.reverse()
-    .map(letter => reversedWord += letter);
-  return reversedWord;
+  return letters.reverse().join('');
 };
 
 const isPalindrome = (inputWord = '', word = '') => {
