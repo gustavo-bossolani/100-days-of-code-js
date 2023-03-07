@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: brown;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 60vw;
+  height: 20vh;
+}
+
+.content {
+  display: flex;
+}
+
+input {
+  outline: none;
+  padding: 2vh;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+}
+
+button {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 2vh;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
