@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css" />
+
+  <title>Google Driver Download Link Generator</title>
+</head>
+<body>
+
+  <div class="buttons">
+    <button id="button-video">Video</button>
+    <button id="button-link">Link</button>
+    <button id="button-audio">Audio</button>
+  </div>
+
+  <div class="main-container">
+    <section class="hidden" id="section-video">
+      <i class="fa-regular fa-video"></i>
+      <h1>Vide/Doc Embed Link</h1>
+      <p>If you link was an Video or Document, use the code snippet to embed it on a web page.</p>
+      <hr>
+      <h2>Video/Document Embed Link</h2>
+
+      <div class="generated-area">
+        <textarea></textarea>
+        <button>Copy</button>
+      </div>
+
+    </section>
+
+    <section class="" id="section-link">
+      <i class="fa-regular fa-download"></i>
+      <h1>Google Drive Link</h1>
+
+      <p>Paste your Google Drive File link below</p>
+      <input type="text"/>
+      <button>Generate Direct Download Link</button>
+
+      <h2>Direct Download Link</h2>
+
+      <div class="generated-area">
+        <textarea></textarea>
+        <button>Copy</button>
+      </div>
+
+    </section>
+
+    <section class="hidden" id="section-audio">
+      <i class="fa-light fa-headphones"></i>
+
+      <h1>Audio Embed Link</h1>
+      <p>If your link was an Audio file, use the code snippet to embed it on a web page.</p>
+      <hr>
+      <h2>Audio Embed Link</h2>
+      <div class="generated-are">
+        <textarea></textarea>
+        <button>Copy</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://kit.fontawesome.com/5fb2514673.js" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
