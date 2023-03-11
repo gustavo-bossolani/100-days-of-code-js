@@ -2,10 +2,52 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input {
+  width: 40vw;
+  padding: 10px;
+  outline: none;
+  background: gray;
+  color: black;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+textarea {
+  padding: 10px;
+  outline: none;
+  background: gray;
+  color: black;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid white;
+  width: 80%;
+  margin: 5vh 0;
+}
+
+p {
+  color: grey;
+}
+
+#preview {
+  align-self: center;
+  margin: 2vh;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.active {
+  background: rgb(45, 85, 118) !important;
 }
 
 .main-container {
@@ -14,4 +56,37 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+button {
+  margin: 5px;
+  min-width: 70px;
+  font-weight: lighter;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background: steelblue;
+  color: white;
+}
+
+button:hover {
+  background: rgb(62, 115, 159);
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#section-link h1 {
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+#section-link p {
+  font-weight: lighter;
+  font-size: 1rem;
 }
