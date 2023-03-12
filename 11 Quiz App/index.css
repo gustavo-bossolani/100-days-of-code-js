@@ -1,0 +1,123 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: brown;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+hr {
+  align-self: flex-end;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 1vh;
+  font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: 40vh;
+  max-height: 80vh;
+  width: 40vw;
+  background-color: black;
+  border-radius: 15px;
+  padding: 2vh;
+}
+
+.card button#start {
+  background-color: brown;
+  color: white;
+}
+
+.card button#start:hover {
+  background-color: rgb(148, 40, 40);
+  ;
+  cursor: pointer;
+}
+
+section.quiz {
+  width: 80%;
+}
+
+section.quiz #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.quiz #header button#next-question {
+  height: 100%;
+}
+
+section.quiz #header button#next-question:hover {
+  cursor: pointer;
+  background: rgb(220, 219, 219);
+}
+
+section.quiz #header button#next-question[disabled] {
+  cursor: no-drop;
+  color: rgb(138, 138, 138);
+  background: #4f4f4f !important;
+}
+
+section div.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1vh;
+}
+
+div.question-container * {
+  margin: 1vh 0;
+}
+
+div.question-container button#option:hover {
+  cursor: pointer;
+  background: rgb(199, 199, 199);
+}
+
+div.question-container button#option[disabled] {
+  color: white;
+  cursor: no-drop;
+  background: #4f4f4f !important;
+}
+
+div.question-container button#option.selected {
+  background-color: brown !important;
+}
+
+section.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+}
+
+section.score p#message {
+  font-size: 1rem;
+  color: grey;
+  margin: 3vh 0;
+}
+
+section.score p#score {
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+}
