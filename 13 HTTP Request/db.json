@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "RTX 3080 Ti",
+    "price": "R$ 2800,00"
+  },
+  {
+    "id": 2,
+    "name": "TV LG 120Hz 50''",
+    "price": "R$ 5299,00"
+  },
+  {
+    "id": 3,
+    "name": "Keyboard HyperX Switch Brown",
+    "price": "R$ 500,00"
+  },
+  {
+    "id": 4,
+    "name": "Headset Corsair Void Pro RGB",
+    "price": "R$ 800,00"
+  },
+  {
+    "id": 5,
+    "name": "SSD NVMe 2TB Samsung EVO Black",
+    "price": "R$ 2000,00"
+  },
+  {
+    "id": 6,
+    "name": "Notebook Lenonov Ideapad Gaming",
+    "price": "R$ 3600,00"
+  }
+]
