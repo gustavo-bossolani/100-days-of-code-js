@@ -58,6 +58,7 @@ const startButton = document.querySelector('#start');
 const nextButton = document.querySelector('#next-question');
 const timer = document.querySelector('#timer');
 
+let timerInterval = null;
 let score = 0;
 let step = 1;
 
@@ -186,7 +187,13 @@ const finishQuiz = () => {
   removeOptions();
   removeCountersFromScreen();
   showScore();
+  stopTimer();
   quiz.classList.add('hidden');
+};
+
+const stopTimer = () => {
+  timer.classList.add('hidden');
+  clearInterval(timerInterval);
 };
 
 const startTimer = () => {
@@ -196,10 +203,8 @@ const startTimer = () => {
   timer.classList.remove('hidden');
   timer.innerText = `${minutes}:${seconds < 10 ? '0' + seconds : seconds }`;
 
-  const interval = setInterval(() => {
+  timerInterval = setInterval(() => {
     if (minutes === 0 && seconds === 0) {
-      timer.classList.add('hidden');
-      clearInterval(interval);
       finishQuiz();
     };
 
