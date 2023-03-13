@@ -1,55 +1,54 @@
 const questions = [
   {
-    question: 'Qual o maior continente do mundo?',
+    question: 'Qual linguagem mais utilizada por um DBA?',
     options: [
-      { label: 'Ásia', correct: true },
-      { label: 'America do Sul', correct: false },
-      { label: 'Oceania', correct: false },
-      { label: 'America do Norte', correct: false },
-      { label: 'Europa', correct: false },
+      { label: 'SQL', correct: true },
+      { label: 'Java', correct: false },
+      { label: 'C#', correct: false },
+      { label: 'Excel', correct: false },
+      { label: 'C++', correct: false },
     ]
   },
   {
-    question: 'Qual o maior mamifero do mundo?',
+    question: 'Qual tecnologia pode ser utilizada para criação de apps Desktop?',
     options: [
-      { label: 'Baleia', correct: true },
-      { label: 'Elefante', correct: false },
-      { label: 'Girafa', correct: false },
-      { label: 'Hipopótamo', correct: false },
-      { label: 'Gorila', correct: false },
+      { label: 'Electron', correct: true },
+      { label: 'NestJs', correct: false },
+      { label: '.NET Core', correct: false },
+      { label: 'Spring Boot', correct: false },
+      { label: 'Todas anteriores', correct: false },
     ]
   },
   {
-    question: 'Em que ano aconteceu o 11 de setembro?',
+    question: 'Qual o significado da sigla SPA?',
     options: [
-      { label: '2001', correct: true },
-      { label: '2011', correct: false },
-      { label: '1999', correct: false },
-      { label: '2013', correct: false },
-      { label: '2000', correct: false },
+      { label: 'Single Page Application', correct: true },
+      { label: 'Simples Poderoso e Aplicável', correct: false },
+      { label: 'SQL Power Automation', correct: false },
+      { label: 'Sem Poder de Automação', correct: false },
+      { label: 'Nenhum das anteriores', correct: false },
     ]
   },
   {
-    question: 'Qual elemento não faz parte da tabela periodica?',
+    question: 'Qual tecnologia é possível criar apps para devices móveis?',
     options: [
-      { label: 'H2O', correct: true },
-      { label: 'Mg', correct: false },
-      { label: 'Na', correct: false },
-      { label: 'Sc', correct: false },
-      { label: 'H', correct: false },
+      { label: 'Todas anteriores', correct: true },
+      { label: 'React', correct: false },
+      { label: 'Xamarin', correct: false },
+      { label: 'Android', correct: false },
+      { label: 'Flutter', correct: false },
     ]
   },
   {
-    question: 'Quais são as cores secundárias?',
+    question: 'O Node é baseado em qual tecnologia?',
     options: [
-      { label: 'Laranja, Verde e Roxo', correct: true },
-      { label: 'Vermelho, Amarelo e Azul', correct: false },
-      { label: 'Branco, Preto e Vermelho', correct: false },
-      { label: 'Roxo, Lilás e Azul', correct: false },
-      { label: 'Amarelo, Azul, Roxo e Vermelho', correct: false },
+      { label: 'V8 Chrome', correct: true },
+      { label: 'Chromium', correct: false },
+      { label: 'JVM', correct: false },
+      { label: 'Microsoft Office', correct: false },
+      { label: 'Nenhuma das anteriores', correct: false },
     ]
   },
-
 ];
 
 const quiz = document.querySelector('.quiz');
