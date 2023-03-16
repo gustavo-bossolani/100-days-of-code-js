@@ -1,0 +1,69 @@
+body {
+  background: linear-gradient(156deg, rgba(176,10,159,1) 0%, rgba(43,0,98,1) 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+section div.container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: auto;
+  width: auto;
+  min-height: 60vh;
+  min-width: 30vw;
+  background-image: url('./images/weather.png');
+  color: white;
+  padding: 2vh;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 1px rgba(0 0 0 / 50%);
+}
+
+section div.container > h1 {
+  font-size: 2rem;
+}
+
+div.search-container {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.search-container input {
+  border: none;
+  outline: none;
+  background: rgba(0 0 0 / 50%);
+  color: gray;
+  padding: 2vh;
+  border-radius: 10px;
+}
+
+div.search-container button {
+  width: 50%;
+  border: none;
+  outline: none;
+  background: slateblue;
+  color: white;
+  padding: 1vh;
+  border-radius: 10px;
+}
+
+div.search-container button:hover {
+  background: rgb(106 90 205 / 80%);
+  cursor: pointer;
+}
