@@ -15,15 +15,14 @@ body {
 }
 
 section div.container {
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
 
   height: auto;
   width: auto;
-  min-height: 60vh;
+  min-height: 70vh;
   min-width: 30vw;
   background-image: url('./images/weather.png');
   color: white;
@@ -37,7 +36,7 @@ section div.container > h1 {
 }
 
 div.search-container {
-  height: 10vh;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,6 +50,7 @@ div.search-container input {
   color: gray;
   padding: 2vh;
   border-radius: 10px;
+  font-size: 1rem;
 }
 
 div.search-container button {
@@ -64,6 +64,26 @@ div.search-container button {
 }
 
 div.search-container button:hover {
-  background: rgb(106 90 205 / 80%);
+  background: rgb(106 90 205 / 90%);
   cursor: pointer;
+}
+
+div.search-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div .search-content img {
+  width: 5vw;
+  height: 7vh;
+}
+
+div .search-content p.city {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+div .search-content p.day {
+  text-transform: capitalize;
 }
