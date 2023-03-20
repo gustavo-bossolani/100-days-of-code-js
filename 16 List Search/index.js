@@ -1,4 +1,5 @@
 const input = document.querySelector('input');
+const list = document.querySelector('ul');
 const companies = [
   'Microsoft',
   'Nubank',
@@ -27,6 +28,16 @@ const companies = [
   'Oracle',
 ];
 
+const debounce = (callback, time = 500) => {
+  let timer = null;
+  return (...args) => {
+    window.clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      callback.apply(null, args);
+    }, time);
+  }
+};
 
 const filterCompanies = (value) =>
   companies.filter(
@@ -40,21 +51,24 @@ const filterCompanies = (value) =>
       )
   );
 
-input.addEventListener('input', () => {
+const listCompanies = (e) => {
+  console.log('argument binded by function.apply', e);
+  const filteredCompanies = filterCompanies(input.value);
 
-  
+  let template = '';
 
-});
+  if (filteredCompanies.length > 0) {
+    filteredCompanies.forEach(item => {
+      template += `<li>${item}</li>`
+    });
+  } else {
+    template = `<p>Company not found</p>`;
+  }
+  list.innerHTML = template;
+}
 
-const debounce = (callback, time = 500) => {
-  let timer;
+const handleFilterCompanies = debounce(listCompanies, 300);
 
-  clearTimeout(timer);
-  timer = setTimeout(() => { callback() }, time);
-};
+input.addEventListener('keyup', (event) => handleFilterCompanies(event));
 
-const test = () => console.log('oi')
-
-input.addEventListener('keyup', () => debounce(
-  test, 1000
-));
+listCompanies();
