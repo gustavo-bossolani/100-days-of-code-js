@@ -6,9 +6,11 @@ const resultTip = document.querySelector('.result p.tip');
 const resultTotalBill = document.querySelector('.result p.total-bill');
 
 
-
 const showError = (message) => {
-  setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+  setTimeout(() => {
+    errorMessage.classList.add('hidden');
+    errorMessage.textContent = '';
+  }, 3000);
   errorMessage.textContent = message;
   errorMessage.classList.remove('hidden');
 };
