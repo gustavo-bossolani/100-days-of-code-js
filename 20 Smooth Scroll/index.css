@@ -1,0 +1,84 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: seashell;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: teal;
+  padding: 1% 2%;
+  box-shadow: 1px 0px 5px black;
+  margin-bottom: 2vh;
+}
+
+header img {
+  border-radius: 10px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  width: 50%;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+section {
+  height: 60vh;
+  margin: 5vh 0px;
+}
+
+hr {
+  width: 80%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5vh;
+  padding: 5vh;
+}
+
+.container p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 5vw;
+  background-color: #cacaca;
+  padding: 3%;
+}
+
+#two div.container, #four div.container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5vh;
+  background: teal;
+  color: white;
+  box-shadow:51px 0px 1px black;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul * {
+  margin: 1vh;
+}
