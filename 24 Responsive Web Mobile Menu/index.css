@@ -1,0 +1,132 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: beige;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+section {
+  display: flex;
+  padding: 2vh;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+header {
+  background: tan;
+  box-shadow: 1px 1px 5px #c4c4c4;
+  max-height: 10vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vh;
+  flex-wrap: wrap;
+}
+
+nav h1.logo {
+  color: papayawhip;
+}
+
+nav div.section-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+nav div.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav div.section-list a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black
+}
+
+/* menu buttons */
+
+.menu-close {
+  background-image: url('./images/close.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 5vh 5vw;
+  height: 10vh;
+  width: 10vw;
+}
+.menu {
+  background-image: url(./images/menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 5vh 5vw;
+  height: 10vh;
+  width: 10vw;
+}
+
+/* mobile */
+
+@media screen and (max-width: 600px) {
+  section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav div.section-list {
+    flex-direction: column;
+    background: rgba(0 0 0 / 70%);
+    margin: 0 auto;
+    width: 90%;
+    padding: 0 1rem;
+    font-size: 1rem;
+    z-index: 999;
+    transform: translateY(-200%);
+    transition: all .5s;
+  }
+  
+  nav div.section-list a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+  }
+    
+  nav div.section-list a:hover {
+    background: black;
+    width: 100%;
+  }
+  
+  i.menu {
+    display: block;
+  }
+
+  i:hover {
+    cursor: pointer;
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-close {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .menu {
+    display: none !important;
+  }
+
+  .menu-close {
+    display: none !important;
+  }
+}
