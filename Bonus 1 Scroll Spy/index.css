@@ -1,0 +1,92 @@
+body {
+  background: black;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header */
+
+.logo {
+  color: orange;
+  font-weight: 2rem;
+  transition: all .5s;
+}
+
+.nav {
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  transition: all .5s;
+}
+
+.nav a {
+  color: white;
+}
+
+.fluid-nav {
+  position: fixed;
+  background: white;
+  color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fluid-nav .logo {
+  font-size: 1rem;
+}
+
+.fluid-nav a {
+  color: black;
+}
+
+nav div.section-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 40vw;
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 500;
+  border-bottom: 1px solid orange;
+  transform: all .5s;
+}
+
+/* end header */
+
+/* sections */
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section p {
+  color: white;
+  font-size: 1rem;
+}
+
+/* end section */
+
+/* footer */
+
+footer {
+  background-color: orange;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
