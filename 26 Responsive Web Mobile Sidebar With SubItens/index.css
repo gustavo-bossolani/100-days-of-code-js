@@ -1,0 +1,160 @@
+body {
+  background: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+}
+
+h1.logo {
+  font-size: 2rem;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  transition: all .2s;
+}
+
+nav.nav-desktop div.section-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav.nav-destkop div.section-list a {
+  color: grey;
+  font-size: 1rem;
+}
+
+i.close-menu {
+  display: none;
+}
+
+
+i.close-menu:hover {
+  cursor: pointer;
+}
+
+i.open-menu:hover {
+  cursor: pointer;
+}
+
+/* fluid nav */
+.fluid-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  transition: all .2s;
+}
+
+.fluid-nav h1.logo {
+  color: whitesmoke;
+}
+.fluid-nav i {
+  filter: invert();
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  nav.nav-desktop {
+    display: none;
+  }
+  nav.nav-mobile {
+    display: flex;
+  }
+
+  div.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 80%);
+    z-index: 997;
+  }
+
+  nav.nav-mobile div.section-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50vw;
+    background: black;
+    z-index: 998;
+    padding: 0 2rem;
+    transform: translatex(-100rem);
+    transition: all .5s;
+  }
+
+  nav.nav-mobile div.section-list a {
+    font-size: 1.5rem;
+    color: white;
+    transform: translateX(0);
+    transition: all .2s;
+  }
+
+  nav.nav-mobile div.section-list a:hover {
+    font-size: 1.5rem;
+    color: grey;
+    transform: translateX(10px);
+  }
+
+  i.close-menu {
+    background-image: url(./images/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5vh 5vw;
+    height: 5vh;
+    width: 5vw;
+    z-index: 999;
+    position: fixed;
+    filter: invert();
+    right: 0;
+    top: 1vh;
+    margin: 1rem;
+  }
+
+  i.open-menu {
+    background-image: url(./images/menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5vh 5vw;
+    height: 5vh;
+    width: 5vw;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 601px) {
+  nav.nav-desktop {
+    display: flex;
+  }
+
+  nav.nav-desktop div.section-list a {
+    margin: 0 1rem;
+  }
+
+  nav.nav-mobile {
+    display: none;
+  }
+}
