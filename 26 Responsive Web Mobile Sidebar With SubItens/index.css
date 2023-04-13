@@ -30,6 +30,7 @@ nav.nav-desktop div.section-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
 }
 
 nav.nav-destkop div.section-list a {
@@ -63,8 +64,22 @@ i.open-menu:hover {
 .fluid-nav h1.logo {
   color: whitesmoke;
 }
-.fluid-nav i {
+.fluid-nav img, .fluid-nav i {
   filter: invert();
+}
+
+.nav-desktop.fluid-nav a,
+.nav-desktop.fluid-nav div.section-list a {
+  color: whitesmoke;
+}
+
+.nav-desktop.fluid-nav div.section-list li.sub-itens {
+  background: black;
+}
+
+
+.hidden {
+  display: none !important;
 }
 
 /* mobile */
@@ -75,6 +90,37 @@ i.open-menu:hover {
   nav.nav-mobile {
     display: flex;
   }
+
+  nav.nav-mobile .section-list li.sub-itens a:hover {
+    color: white;
+    transform: translateX(10px);
+    transition: all .2s;
+  }
+
+  nav.nav-mobile .section-list li.sub-itens a {
+    font-size: 1.3rem !important;
+    margin: 1rem 0 0 1rem;
+    transform: translateX(0);
+    transition: all .2s;
+  }
+  nav.nav-mobile .section-list li {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 20vh;
+    width: 50vw;
+  }
+
+  .arrow {
+    width: 1rem;
+    height: 1rem;
+    filter: invert(1);
+    margin: 0 1rem;
+    transform: rotateX(180deg);
+  }
+  
 
   div.overlay {
     display: none;
@@ -113,9 +159,11 @@ i.open-menu:hover {
     transition: all .2s;
   }
 
-  nav.nav-mobile div.section-list a:hover {
+  nav.nav-mobile div.section-list a:hover,
+  nav.nav-mobile div.section-list a:active {
     font-size: 1.5rem;
     color: grey;
+    cursor: pointer;
     transform: translateX(10px);
   }
 
@@ -151,8 +199,51 @@ i.open-menu:hover {
   }
 
   nav.nav-desktop div.section-list a {
-    margin: 0 1rem;
+    margin-left: 2rem;
   }
+
+  nav.nav-desktop div.section-list a:hover {
+    cursor: pointer;
+  }
+
+  nav.nav-desktop li.sub-itens {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    position: absolute;
+    box-shadow: 0px 2px 5px -1px grey;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 1rem;
+    z-index: 999;
+  }
+
+  nav.nav-desktop li.sub-itens a {
+    margin: 1rem;
+    transition: all .3s;
+    transform: translateY(0);
+  }
+
+  nav.nav-desktop li.sub-itens a:hover {
+    cursor: pointer;
+    transition: all .2s;
+    transform: translateX(10px);
+  }
+
+  .arrow {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 1rem;
+    transform: rotateX(180deg);
+  }
+  
+  .sub-itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   nav.nav-mobile {
     display: none;
